@@ -9,6 +9,7 @@ RSpec.shared_examples "rover movement" do |plateu, start_pos, end_pos, moves|
         expect(subject.position.x).to eq(end_pos.x)
         expect(subject.position.y).to eq(end_pos.y)
         expect(subject.position.direction).to eq(end_pos.direction)
+        expect(subject.position.cardeal_point).to eq(end_pos.cardeal_point)
       end
     end
   end
