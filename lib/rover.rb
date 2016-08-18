@@ -29,8 +29,8 @@ class Rover
 
   #move foward
   def m
-    cardeal_point = Position::CARDEAL_POINTS[position.direction]
-    case cardeal_point
+
+    case position.cardeal_point
     when 'N'
       position.y += 1
     when 'S'
@@ -43,6 +43,7 @@ class Rover
     adjust_position
   end
 
+  #check if position is inside plateu
   def adjust_position
     position.x = [position.x, @plateu.width].min
     position.x = [position.x, 0].max
